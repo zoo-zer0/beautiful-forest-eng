@@ -10,8 +10,13 @@ function ScrollytellingStadium() {
   const seat2: Seat = {x:-100,y:-1000,구역:""}; //show graph //= { x: 149, y: 388, 구역: "SKY 상단지정석" };
   const seat3: Seat | null = null;
   const seat4: Seat = {x:-100,y:-1000,구역:""}; //show graph
-  const seat5: Seat | null=null; //hide graph
-  const seat6: Seat={ x: 177,y: 318,구역: "네이비석"}
+  const seat5: Seat = { x: 177,y: 318,구역: "그린지정석"}; //green seats
+  const seat6: Seat | null = null; //hide graph
+  const seat7: Seat={ x: 177,y: 328,구역: "네이비석"} //navy seats
+  const seat8: Seat={ x: 177,y: 338,구역: "블루석"} //blue seats
+  const seat9: Seat={ x: 177,y: 348,구역: "레드석"} //red seats
+  const seat10: Seat={ x: 177,y: 358,구역: "레드석"} //red seats
+
 
   const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.5 });
   const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.5 });
@@ -20,6 +25,9 @@ function ScrollytellingStadium() {
   const { ref: ref5, inView: inView5 } = useInView({ threshold: 0.5 });
   const { ref: ref6, inView: inView6 } = useInView({ threshold: 0.5 });
   const { ref: ref7, inView: inView7 } = useInView({ threshold: 0.5 });
+  const { ref: ref8, inView: inView8 } = useInView({ threshold: 0.5 });
+  const { ref: ref9, inView: inView9 } = useInView({ threshold: 0.5 });
+  const { ref: ref10, inView: inView10 } = useInView({ threshold: 0.5 });
 
   // ✅ move state update into useEffect
   useEffect(() => {
@@ -28,12 +36,17 @@ function ScrollytellingStadium() {
         if (inView1) setActiveSeat(seat1);
         else if (inView2) setActiveSeat(seat2);
     }
-    else if (inView3 || inView4 || inView5 || inView6 || inView7){ // 포스트시즌 LG
+    else if (inView3 || inView4 || inView5 || inView6 || inView7 || inView8 || inView9 || inView10){ // 포스트시즌 LG
          setActiveGameID("6"); 
         if(inView3) setActiveSeat(seat3);
         else if (inView4) setActiveSeat(seat4);
         else if (inView5) setActiveSeat(seat5);
-        else if (inView6 || inView7) setActiveSeat(seat6);
+        else if (inView6) setActiveSeat(seat6);
+        else if (inView7) setActiveSeat(seat7);
+        else if (inView8) setActiveSeat(seat8);
+        else if (inView9) setActiveSeat(seat9);
+        else if (inView10) setActiveSeat(seat10);
+
     }
     else{
 
@@ -56,14 +69,18 @@ function ScrollytellingStadium() {
         <section ref={ref1} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView1 ? "active-step" : ""}>
-8월 8~10일까지 한화 이글스와 LG 트윈스의 3연전이 열린, LG 트윈스의 홈구장 ‘잠실종합운동장 야구장’입니다.            </p>
+To look further into this trend, let’s look at the Jamsil Seoul Sports Complex Baseball Stadium, home to the LG Twins. From August 8 to 10, they hosted a regular-season three-game series against the Hanwha Eagles.
+
+            </p>
             </div>
         </section>
 
         <section ref={ref2} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView2 ? "active-step" : ""}>
-월요일을 제외하고 연일 경기가 이어지는 정규 시즌임에도, 티켓 리셀 가격이 원가의 300% 수준에 달했습니다.
+Each seat section on the left shows the average price increase rate of Ticketbay listings—measured as resale price divided by original price—colored by a gradient from light (100%) to dark (800%). The bar graph on the right compares the original price with the average resale price. 
+<br></br><br></br>
+During the regular season, resale prices averaged <strong>300%</strong> of face value. 
             </p>
             </div>
         </section>
@@ -71,7 +88,7 @@ function ScrollytellingStadium() {
         <section ref={ref3} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView3 ? "active-step" : ""}>
-포스트시즌이 시작되자, 같은 구장임에도 뚜렷한 차이가 나타났습니다.
+However, once the postseason began, the contrast became unmistakable: the colors darkened, and so did the numbers.
             </p>
             </div>
         </section>
@@ -79,11 +96,11 @@ function ScrollytellingStadium() {
         <section ref={ref4} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView4 ? "active-step" : ""}>
-한국시리즈 1·2차전이 열린 LG의 홈구장 잠실에서는, 한화 이글스와 LG 트윈스의 경기 티켓 리셀 가격이 원가의 
-                <mark style={{backgroundColor:"#bfc4d9ff",padding:"0.05em 0.1em",fontWeight: inView4 ? "bold" : "normal"}}>
+At Jamsil, where Games 1 and 2 of the Korean Season were held, tickets for the Hanwha Eagles vs LG Twins matchup were resold at an average of <mark style={{backgroundColor:"#bfc4d9ff",padding:"0.05em 0.1em",fontWeight: inView4 ? "bold" : "normal"}}>
                     540%
-                </mark>
-에 달하며 프리미엄이 급등했습니다.
+                </mark> of their original price.
+<br></br> <br></br>
+As resale ticket prices soared, some fans were simply priced out of attending games.
             </p>
             </div>
         </section>
@@ -91,7 +108,9 @@ function ScrollytellingStadium() {
         <section ref={ref5} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView5 ? "active-step" : ""}>
-재판매 티켓 가격이 치솟자, 야구를 보고 싶어도 표를 구하지 못하는 팬들이 생겼습니다.
+For example, the Green seats, popular for their relatively affordable price of ₩35,000, showed a <mark style={{backgroundColor:"#bfc4d9ff",padding:"0.05em 0.1em",fontWeight: inView5 ? "bold" : "normal"}}>
+                    619.2%
+                </mark> price increase. The histogram on the right shows the distribution of these listings, with none going below ₩130,000.
             </p>
             </div>
         </section>
@@ -99,14 +118,39 @@ function ScrollytellingStadium() {
         <section ref={ref6} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView6 ? "active-step" : ""}>
-외야석인 그린지정석(원가 3만 5천 원, 프리미엄 비율 619.2%)과 내야석인 블루석(8만 원, 473.6%), 네이비석(5만 원, 562.2%), 레드석(5만5천 원, 517.4%)은 비교적 가격이 합리적이고 시야가 좋아 팬들의 선호도가 높은 좌석입니다.
+This pattern is not unique to a single section.
             </p>
             </div>
         </section>
         <section ref={ref7} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView7 ? "active-step" : ""}>
-그러나 이 좌석들의 평균 재판매 가격은 모두 20만원을 넘어, 프리미엄석 정가(16만 원)보다도 높게 형성됐습니다. 일반 관중이 가장 선호하는 ‘가성비 좌석’이 사실상 사라지며, 야구 관람의 문턱이 높아지고 있습니다.            </p>
+    The Navy seats, originally, ₩50,000, showed an average price increase of <mark style={{backgroundColor:"#bfc4d9ff",padding:"0.05em 0.1em",fontWeight: inView7 ? "bold" : "normal"}}>
+                    562.2%. 
+                </mark>
+
+            </p>
+            </div>
+        </section>
+                <section ref={ref8} style={{ height: "100vh"}}>
+            <div className="scroll-box">
+            <p className={inView8 ? "active-step" : ""}>
+Similar patterns appeared for the Blue seats (originally ₩80,000,  price increase 473.6%),
+            </p>
+            </div>
+        </section>
+                <section ref={ref9} style={{ height: "100vh"}}>
+            <div className="scroll-box">
+            <p className={inView9 ? "active-step" : ""}>
+and the Red Seats (originally ₩50,000, price increase 517.4%).
+            </p>
+            </div>
+        </section>
+                <section ref={ref10} style={{ height: "100vh"}}>
+            <div className="scroll-box">
+            <p className={inView10 ? "active-step" : ""}>
+These so-called “regular seats” sell for an average of over ₩200,000—exceeding the ₩160,000 original price of the Premium Seats. As affordable sections virtually disappear, rising ticket prices have turned watching a game from a public pastime into a privilege. 
+            </p>
             </div>
         </section>
         </div>

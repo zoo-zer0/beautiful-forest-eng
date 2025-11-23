@@ -27,7 +27,7 @@ export default function Toggle({
         style={{
           textAlign: "left",
           width: "90%",
-          maxWidth: "580px",
+          maxWidth: "600px",
           margin: "auto",
           padding: "10px 15px",
           border: "2px solid rgb(172, 172, 172)",

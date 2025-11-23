@@ -2,14 +2,12 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Hero() {
   const titleRef = useRef(null);
-  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisible(true);
             observer.unobserve(entry.target);
           }
         });
@@ -30,7 +28,7 @@ export default function Hero() {
     >
       {/* background image */}
       <img
-        src="/img/title.png"
+        src="/img/title.jpeg"
         alt="Hero background"
         style={{
           height: "100vh",
@@ -44,14 +42,14 @@ export default function Hero() {
       <div style={{
           position: "absolute",
           top: "50%",
-          left: "54%",
+          left: "50%",
           textAlign: "center",
-          opacity: visible ? 1 : 0,
-          transition: "opacity 1s ease-in-out",
-          transform: "translate(-50%,-50%)"
+          transform: "translate(-50%,-50%)",
+          color:"white",
         }}>
-      <h1 ref={titleRef} style={{fontSize:"40px", marginBlock:0}}>가지도 않을 표를<br></br> 사는 사람들</h1>
-      <p>by Beautiful숲</p>
+      <h1 ref={titleRef} style={{fontSize:"50px", marginBlock:0}}>Those Who Buy Tickets<br></br> They'll Never Use</h1>
+      <h2 style={{color:"#eaebffff",margin:0,fontWeight:"normal"}}>Inside the World of Korea's Ticket Scalpers</h2>
+      <p style={{margin:"10px"}}>By <strong>Ga-eun Lee</strong>, <strong>Joo-young Hyun</strong>, <strong>Min-gyu Lee</strong>, <strong>Soo-bin Kim</strong>, and <strong>So-yeon Lee</strong></p>
       </div>
     </div>
   );

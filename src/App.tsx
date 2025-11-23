@@ -5,80 +5,96 @@ import InteractiveStadium from './components/StadiumInteractive/InteractiveStadi
 import ScrollytellingStadium from './components/StadiumInteractive/ScrollytellingStadium.tsx';
 //import ScrollytellingStadium2 from './components/StadiumInteractive/ScrollytellingStadium2.tsx';
 import TimeScrollytelling from './components/TimeScrolly/TimeScrolly.tsx';
-import Kakao from './components/Kakao.tsx';
 import SusScrolly from './components/TimeSus/Sus.Scrolly.tsx';
-import Intro from './components/Intro.tsx';
 import Footer from './components/Footer.tsx';
 import Toggle from './assets/Toggle.tsx';
 import QuoteBox from './assets/QuoteBox.tsx';
 import Narrative from './assets/Narrative.tsx';
-import TicketStack from './components/TicketStack.tsx';
 import Hero from './components/Hero.tsx';
 import { ToggleClean } from './components/Top10Toggles.tsx';
 import Top10Toggles from './components/Top10Toggles.tsx';
 import Conclusion from './components/Conclusion.tsx';
-
-
-
+import { Ratio } from './components/DataWrapperCharts.tsx';
 
 function App() {
   
 
   return (
     <div>
-      <Kakao />
-      <Intro />
-      <TicketStack />
       <Hero />
       <Narrative content={
-        <p>당신이 구하려던 티켓, 누군가 재판매 사이트에서 웃돈을 얹어 팔고 있습니다. 
-<br></br>이제는 <strong>‘암표’</strong>만이 경기를 볼 수 있는 유일한 통로가 됐습니다.</p>
+        <>
+<p>
+      <span className="dropcap">O</span>n October 15, 2025, college student Jang set an alarm for 2 p.m.—the exact time ticket sales opened for the KBO postseason playoffs between the Hanwha Eagles and Samsung Lions.
+</p>
+
+<p>
+As an avid Hanwha fan, she logged on to the official booking site, hoping to finally get that ticket. Yet once again, she lost the ticketing wars, watching her queue number climb past 113,000.
+</p>
+
+<p>
+"Yours isn't even that bad," her friend messaged back. "I'm 156,896th."
+</p>
+
+<p>
+Disappointed, Jang browsed through online secondary markets. To her surprise, within minutes, hundreds of resale tickets were already uploaded. Yet, many were listed at three or four times the original price: a price—to a college student—that was no longer affordable. For fans like her, what was once a casual pastime had turned into a race against bots and a game increasingly inaccessible due to inflated prices.
+</p>
+
+<p>
+In 2025, the KBO League celebrated a record-breaking season, drawing over 12 million fans—the highest in its history. The Samsung Lions alone attracted more than 1.6 million spectators, setting a new single-team attendance record. Yet behind this surge in popularity, a parallel resale market has quietly reshaped the fandom, dominated by an influential minority who has no desire to attend a game: scalpers.
+</p>
+
+        </>
       } />
-      <QuoteBox source="국립국어원 표준국어대사전 ‘암표’ 정의, 공연법 제4조의 2 참고"
+      <QuoteBox source="Merriam-Webster Dictionary"
         quote={
-          <div>
-            <strong>암표: </strong>공식적인 판매자가 아닌 자가 자신이 구입한 가격을 초과한 금액으로 다른 사람들에게 되판 입장권.  
-          </div>
+          <p>
+            <strong>Scalp: </strong>to buy and sell so as to make small quick profits <em>especially</em> to resell at greatly increased prices
+          </p>
         }
       color="rgb(43, 63, 107)"/>
       <Narrative content={
-        <div>
-          <p>한때 ‘가볍게 즐기는 국민 스포츠’였던 야구의 즐거움은 어느새 치열한 예매 전쟁과 가격의 장벽에 가로막혔습니다. 수십만 명이 예매 대기열에 몰리는 사이, 온라인에는 수천 건의 암표가 올라옵니다.</p>
+        <>
+<p>
+Scalping is no longer a mere matter of person-to-person resells, but has evolved into a shadow industry, thriving in this new digital landscape. <em>Ticketbay</em>, one of Korea’s largest online resale platforms, takes a 10% commission from every sale—a system critics argue rewards scalpers more than fans.
+</p>
 
-<p>암표는 이제 개인 간의 거래만으로 볼 수 없는, 거대한 하나의 시장이 됐습니다. 그러나 우리는 여전히 그 실체는 명확히 알지 못한 채, 단지 ‘잘못된 일’로만 여기고 있습니다. </p>
+<p>
+At <em>Beautiful Forest</em>, we analyzed the tens of thousands of listings on <em>Ticketbay</em> to uncover how large-scale scalpers drive up prices, and glimpsed into the inner workings of this hidden economy. 
+</p>
 
-<p>뷰티풀숲팀은 온라인 티켓 리셀 플랫폼 ‘티켓베이(Ticketbay)’에 게시된 수만 건의 매물을 분석했습니다. 그 속에서 암표 거래의 규모와 암표 업자로 추정되는 흔적을 찾아, <strong>암표 시장의 실태</strong>를 들여다봤습니다.</p>
-        </div>
+
+        </>
       } />
-      <Toggle summary="분석 및 추적 방법 더 읽어보기"
+      <Toggle summary="Read More: How We Collected the Data"
         content={
           <div>
-            <p>‘티켓베이(Ticketbay)’는 2025년 기준 <em>문화체육관광부의 프로스포츠 온라인 암표 신고 게시판에 가장 많은 신고가 접수된 플랫폼</em>입니다. (전체 28149건 중 21990건, 출처 : 민형배 의원실)</p>
+<p>
+As of 2025, Ticketbay is the most frequently reported platform on the Ministry of Culture, Sports, and Tourism’s online bulletin for illegal ticket resales in professional sports. Of the total 28,149 reports submitted, 21,990 were related to Ticketbay (source: Office of Assemblyman Hyung-bae Min).
+</p>
+<p>
+Data Collection & Analysis Procedure <br></br>
+Between July 25 and October 31, 2025, we crawled and analyzed listings for professional baseball games and concerts posted on Ticketbay.
+</p>
+<p>
+To maintain consistency in data collection, we set fixed collection intervals. For baseball games, data was collected between 11 p.m. and midnight, 30 minutes after pre-sale and general openings, and one hour before the game began. For concerts, data was collected one day before the event and one hour prior to the start time.
+</p>
 
-<p><strong>분석 절차 및 방법</strong><br></br>
-
-2025년 7월 25일 ~ 2025년 10월 31일에 걸쳐 티켓베이에 게시된 프로야구 및 콘서트 매물을 크롤링하여 분석했습니다.</p>
-
-<p>데이터 수집의 일관성을 위해 고정된 수집 주기를 정했습니다. 야구 경기는 매일 오후 11시에서 자정 사이, 선예매·일반 예매 시작 30분 후, 그리고 경기 시작 1시간 전에 데이터를 모았습니다. 공연의 경우, 하루 전날과 공연 시작 1시간 전에 수집했습니다.</p>
           </div>
         }
       />
       <Narrative content={
         <div>
           <br></br>
-          <h1>숫자로 보는 야구 암표 실태</h1>
-      <div style={{justifyContent:"space-between",width: "100%",display:"flex", margin: "auto"}}>
-        <object style={{width:"45%"}} data="/img/data/현황 1.svg" type="image/svg+xml"></object>
-        <object style={{width:"45%"}} data="/img/data/현황 2.svg" type="image/svg+xml"></object>
+          <h1>The Current State of Baseball Scalpers: Looking at the Numbers</h1>
+<p>
+From July 25 to August 14, an average of <strong>2,234 listings</strong> for regular-season KBO tickets appeared on Ticketbay every three-game series. Resale prices were, on average, <strong>1.8 times</strong> higher than the original face value.
+</p>
 
-      </div>
-<p>올 여름 한 달간(07.25 ~ 08.14 기준) 티켓베이에 등록된 정규시즌 프로야구 티켓은 3연전(3경기 묶음) 기준 평균 <strong>2234건</strong>이었습니다. </p>
-
-<p>판매 가격은 원가보다 평균 <strong>1.8배</strong> 높았습니다.</p>
-
-<p>포스트시즌 티켓의 평균 재판매 가격은 원가의 약 <strong>3.4배</strong>로, <strong>정규시즌의 2배 수준</strong>으로 형성됐습니다.</p>
-
-<p>‘가을 야구’의 열기가 티켓 가격마저 끌어올린 셈입니다.</p>
+<p>
+For postseason games, the average resale price surged to <strong>3.4 times</strong> the original—<strong>nearly double</strong> the price increase seen during the regular season. Postseason demand alone pushed prices to unprecedented highs.
+</p>
+<Ratio />
         </div>
       } />
       <br></br>

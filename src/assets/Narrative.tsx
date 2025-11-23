@@ -8,7 +8,7 @@ export default function Narrative({
   style={{
             textAlign: "left",
             width: "90%",
-            maxWidth: "600px",
+            maxWidth: "650px",
             margin: "auto"
         }}>
     {content}
