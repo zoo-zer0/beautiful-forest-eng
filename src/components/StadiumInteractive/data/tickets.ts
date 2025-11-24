@@ -17912,7 +17912,7 @@ export const ticketData = {
         }
       }
     ],
-    "Infield Designated SeatA": [
+    "Infield Designated Seat A": [
       {
         "name": 20000,
         "value": 499,
@@ -18690,7 +18690,7 @@ export const ticketData = {
         }
       }
     ],
-    "Infield Designated SeatB": [
+    "Infield Designated Seat B": [
       {
         "name": 20000,
         "value": 673,
@@ -112064,7 +112064,7 @@ export const ticketData = {
     ]
   },
   "7": {
-    "Infield Designated SeatA": [
+    "Infield Designated Seat A": [
       {
         "name": 20000,
         "value": 0,
@@ -112842,7 +112842,7 @@ export const ticketData = {
         }
       }
     ],
-    "Infield Designated SeatB": [
+    "Infield Designated Seat B": [
       {
         "name": 20000,
         "value": 0,
