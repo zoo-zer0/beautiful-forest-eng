@@ -37,11 +37,11 @@ As an avid Hanwha fan, she logged on to the official booking site, hoping to fin
 </p>
 
 <p>
-Disappointed, Jang browsed through online secondary markets. To her surprise, within minutes, hundreds of resale tickets were already uploaded. Yet, many were listed at three or four times the original price: a price—to a college student—that was no longer affordable. For fans like her, what was once a casual pastime had turned into a race against bots and a game increasingly inaccessible due to inflated prices.
+Frustrated, Jang browsed through online secondary markets. To her surprise, within minutes, over a thousand resale tickets were already uploaded. Yet, many were listed at three or four times the original price: a price—to a college student—that was no longer affordable. For fans like her, what was once a casual pastime had turned into a race against bots and a game increasingly inaccessible due to inflated prices.
 </p>
 
 <p>
-In 2025, the KBO League celebrated a record-breaking season, drawing over 12 million fans—the highest in its history. The Samsung Lions alone attracted more than 1.6 million spectators, setting a new single-team attendance record. Yet behind this surge in popularity, a parallel resale market has quietly reshaped the fandom, dominated by an influential minority who has no desire to attend a game: scalpers.
+In 2025, the KBO League celebrated a record-breaking season, drawing over 12 million fans—the highest in its history. The Samsung Lions alone attracted more than 1.6 million spectators, setting a new single-team attendance record. Yet behind this surge in popularity, a parallel resale market has quietly reshaped the fandom, dominated by an influential minority with no desire to attend a game: scalpers.
 </p>
 
         </>
@@ -100,41 +100,53 @@ For postseason games, the average resale price surged to <strong>3.4 times</stro
       <br></br>
       <ScrollytellingStadium /> 
       <br></br>     
-      <p>경기별 구장을 직접 클릭하여 티켓별 가격 분포를 살펴보세요!</p>
+      <p>Click on a game to view the average resale prices. Click on a seat to view its price distribution.</p>
       <div style={{transform:"scale(1)",display: "flex", flexDirection: "column", alignItems: "center"}}><InteractiveStadium /></div>
       <Narrative content={
         <div>
           <br></br>
-          <h2>암표가 만든 또 다른 장벽</h2>
+          <h2>Another Barrier Created by Scalpers</h2>
             <img src='/img/휠체어석.png' style={{width:"100%"}}></img>
-            <p>휠체어석이 매물로 올라오는 일도 있었습니다.</p>
+            <p>
+              Even wheelchair-accessible seats appeared on resale platforms. During the postseason, a total of <strong>27 wheelchair tickets</strong> were listed, selling at an average of <strong>1.9 times</strong> the original price. Most of these tickets were bundled with nearby regular seats, rather than sold individually.
 
-            <p>포스트시즌 기간 동안 등록된 휠체어석 재판매 티켓은 <strong>총 27건</strong>으로, 원가의 <strong>약 1.9배(192%)</strong>에 팔리고 있었습니다.</p>
+            </p>
+            <p>
+              Due to the commercial motivation behind ticket resales, some fans are being denied their only opportunity to attend a game due to excessive ticket inflation.
+            </p>
 
-            <p>대부분 휠체어석과 그 주변 일반석을 묶어 파는 형태였습니다.</p>
 
-            <p>상업적 목적의 티켓 리셀로 인해, 어떤 이들은 경기를 볼 수 있는 유일한 기회마저 빼앗기고 있는 것입니다.</p>
         </div>
       } />
       <Narrative content={
         <div>
           <br></br>
-          <h1>암표 업자의 실체를 추적하다</h1>
-          <p>정규 시즌 판매 데이터를 아이디별로 추적한 결과, 암표 시장은 특정 판매자들이 대량의 티켓을 반복적으로 등록하며 주도하는 구조로 형성돼 있었습니다.</p>
-          <p>일부 계정은 수백 장의 티켓을 상시 등록해, 사실상 <strong>상업적 규모의 거래</strong>를 이어가고 있었습니다.</p>
-          <object style={{width:"100%"}} data="/img/data/야구 top 통장표 찐.svg" type="image/svg+xml"></object>
-          <p>티켓 수익과 수량을 기준으로 상위 5명을 분석한 결과, 최소 총액마저도 약 천만 원으로 추정됐습니다. </p>
+          <h1>Following the Trace of Scalpers</h1>
+<p>
+Tracking regular season sales data by member ID revealed that a small number of sellers repeatedly registered large quantities of tickets. Some accounts registered hundreds of tickets, effectively running a commercial-scale business.
+</p>
 
-          <p>이 가운데 수익과 수량 모두 상위권을 차지한 <strong>A씨(ID: 588064)</strong>는 조사 기간 동안 한화- LG의 3연전을 비롯한 여러 경기의 티켓을 활발히 판매했습니다. A씨가 재판매한 티켓은 <strong>총 425장으로 5084만6,800원</strong>에 달했습니다.</p>
-          <object style={{width:"100%"}} data="/img/data/야구 top 통장표 b c씨 강조.svg" type="image/svg+xml"></object>
-          <p>정규 시즌 판매 수익·수량 TOP 5에 포함된 <strong>B씨(ID: 2208431)와 C씨(ID: 2681179)</strong>는 포스트시즌에서도 티켓을 판매한 것으로 확인됐습니다.</p>
+add pic
+<p>
+Above are the top 5 sellers ranked by quantity and profits, all generating <strong>at least 9 million won in profit</strong> during the regular season alone. 
+</p>
+<p>
+Noticeably, Seller A (ID: 588064) ranked highly in both quantity and profits. During our investigation, they sold tickets for, not only the Hanwha vs LG three-game series, but numerous other games. Seller A resold a total of 425 tickets, profiting a total of ₩50,846,800 during regular season. 
+</p>
+<p>
+Seller B (ID: 2208431) and Seller C (ID: 2681179)—both ranked in the top 5 sellers during the regular season—also sold tickets in the postseason.
+</p>
 
-          <p>티켓베이에 게시된 포스트시즌 매물의 상세정보를 분석한 결과, 두 사람이 정규 시즌에서 반복적으로 사용한 이모티콘, 문장, 게시 형식이 그대로 포함된 매물이 다수 발견됐습니다.</p>
+<p>
+An analysis of Ticketbay listing details showed that many postseason listings contained identical phrases, emoticons, and posting formats repeatedly used by these sellers in the regular season. This suggests that they continued large-scale ticket reselling in the postseason.
+</p>
+<p>
+  Open the toggle to view examples of their listings.
+</p>
 
-          <p>정규 시즌에 이어 포스트시즌에서도 대규모 암표 거래를 지속한 정황이 드러난 것입니다.</p>
         </div>
       } />
-<ToggleClean summary={"B씨(ID: 2208431) | 수량: 182개 | 총액: 71,671,800원 |  경기: 와일드카드, 준플레이오프, 플레이오프, 한국시리즈 | 토글을 열면 상세정보란 확인 가능!"} content={
+<ToggleClean summary={"Seller B (ID: 2208431) | Quantity: 182 | Total: ₩71,671,800 | Matches: Wildcard Round, Semi-Playoffs, Playoffs, Korean Series "} content={
    <div>
     
     <p>⭕QnA에 성함과 전화번호 꼭 남겨주세요</p>
@@ -158,7 +170,7 @@ For postseason games, the average resale price surged to <strong>3.4 times</stro
     
     	</div>
     }/>
-<ToggleClean summary={"C씨(ID: 2681179) | 수량: 69개 | 총액: 47,259,200원 | 경기: 와일드카드, 준플레이오프, 플레이오프, 한국시리즈 | 토글을 열면 상세정보란 확인 가능!"} content={
+<ToggleClean summary={"Seller C (ID: 2681179) | Quantity: 69 | Total: ₩47,259,200 | Matches: Wildcard Round, Semi-Playoffs, Playoffs, Korean Series "} content={
    <div>
     
     <p>플레이오프 3차전<br></br>
@@ -191,11 +203,16 @@ For postseason games, the average resale price surged to <strong>3.4 times</stro
   </div>
 }/>
       <Narrative content={<div>
-        <p><strong>B씨</strong>는 와일드카드부터 준플레이오프, 플레이오프, 한국시리즈까지 포스트시즌 전 경기에 걸쳐 암표를 등록했습니다. 총 수량은 <strong>182장</strong>으로, 거래 금액은 <strong>7167만1,800원</strong>에 달했습니다.</p>
-        <p><strong>C씨</strong> 역시 전 경기에서 <strong>4725만9,200원</strong> 상당의 티켓 <strong>69장</strong>을 등록했습니다.</p>
-        <p>특히 C씨는 야구 티켓뿐 아니라 <strong>아이돌</strong> 콘서트 티켓도 거래하며, 추가로 <strong>408만7,000원</strong>을 벌어들였습니다.</p>        
+<p>
+Seller B sold tickets for all postseason games, from the Wildcard Round to the Korean Series, uploading a total of 182 tickets and generating an estimated profit of ₩71,671,800. Seller C uploaded a total of 69 tickets, worth ₩47,259,200. 
+</p>
+
+<p>
+In addition to baseball tickets, Seller C also resold idol concert tickets, generating an additional ₩4,087,000 in profit.
+</p>
+
       </div>}/>
-<ToggleClean summary={"C씨(ID: 2681179) | 수량: 3개 | 총액: 4,087,000원 | 공연: 스트레이키즈, 아이브, NCT WISH | 토글을 열면 상세정보란 확인 가능!"} content={
+<ToggleClean summary={"Seller C (ID: 2681179) | Quantity: 3 | Total: ₩4,087,000 | Performances: Stray Kids, Ive, NCT WISH"} content={
    <div>
     
     <p>WISH 팬분들 반갑습니다~ 오랜만에 하는 NCT WISH~  완전체 :) 오늘 막콘도 호응이 너무 좋을것으로 기대합니다!<br></br>
@@ -261,42 +278,27 @@ For postseason games, the average resale price surged to <strong>3.4 times</stro
     </div>
     }/>
     <Narrative content={<div>
-        <p>B씨와 C씨 외에도, 상세정보란에 <strong>유사한 문구</strong>를 반복적으로 게시한 판매자들이 다수 확인됐습니다.</p>
-      <p>1인당 <strong>1,000만 원어치 이상</strong>의 티켓을 등록한 판매자 <strong>10명</strong>의 게시 내역을 정리했습니다.</p>
+<p>
+Alongside Seller B and C, many other listings during postseason repeated identical phrases and emojis, suggesting repeated behavior by the same resellers.
+</p>
+
+<p>
+Below are listing details for ten sellers that individually profited more than ₩10,000,000 during the postseason. 
+</p>
 
     </div>} />
     <Top10Toggles />
     <Narrative content={<div>
-      <p>이들 모두 여러 경기를 대상으로 대량의 티켓을 유통했습니다. 그중 가장 많은 티켓을 올린 <strong>D씨는 총 280장</strong>을 등록했으며, 거래 금액은 <strong>약 2억 원</strong>에 달했습니다. </p>
+<p>
+All of these resellers sold large amounts of tickets for various games. Among them, Seller D sold 280 tickets, profiting an estimated total of ₩198,279,000.
+</p>
+
+<p>
+In addition to the listing details, we observed suspicious patterns in the timing of the ticket uploads.
+</p>
+
 </div>}/>
-<ToggleClean summary={"11) 수량: 16개 | 총액: 8,412,000원 | 경기: 와일드카드, 준플레이오프, 플레이오프, 한국시리즈 | 토글을 열면 상세정보란 확인 가능!"} content={
-<div>
-    
-    
-    <p>거래건수 6000회 이상의 VVIP등급의 판매자의 글입니다.
-    <br></br>티켓양도 안전하게 진행되오니 많은 이용부탁드립니다.</p>
-    
-    <br></br>
-    
-    <p>■ 참고사항<br></br>
-    
-    - 모바일티켓으로, 선물하기로 진행됩니다<br></br>
-    
-    <br></br>
-    
-    - 공연이 끝난후에 반드시 구매 확정 부탁드립니다.<br></br>
-    
-    <br></br>
-    
-    - 공연 취소 시 베이에서 자동으로 전액 환불됩니다. 연기는 환불X 시간맞추셔서 가야합니다.<br></br></p>
-    
-    	</div>
-    }/>
-<Narrative content={<div>
-      <p>자신을 <strong>‘거래건수 6000회 이상의 VVIP 등급 판매자’</strong>로 칭하며, 티켓 재판매 활동을 경력처럼 내세운 판매자도 있었습니다.</p>
-      <br></br>
-      <p>매물 세부정보나 중복 게시뿐 아니라, <strong>티켓이 업로드된 시점</strong>에서도 특이점이 발견됐습니다.</p>
-    </div>}/>
+
 
       <TimeScrollytelling />
       <SusScrolly />

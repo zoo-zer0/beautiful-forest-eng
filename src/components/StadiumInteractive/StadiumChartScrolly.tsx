@@ -29,9 +29,16 @@ export const StadiumChartScrolly: React.FC<Props> = ({ game, stadiumData, catego
     svg.attr("style","")
       .style("background", `url('/img/stadiums/${game.stadium}.png')`)
       .style("background-size", "cover");
-
+/*
+<strong>Section:</strong> ${d.section}<br>
+          <strong>Resale Price/Original Price Ratio:</strong> ${info ? info["price_to_original_ratio_pct"] : "N/A"}%<br>
+          <strong>Original Price:</strong> ₩${info ? Number(info["avg_original_price"]).toLocaleString() : "N/A"}<br>
+          <strong>Average Resale Price:</strong> ₩${info ? Number(info["avg_price"]).toLocaleString() : "N/A"}<br>
+          <strong>Median Resale Price:</strong> ₩${info ? Number(info["median_price"]).toLocaleString() : "N/A"}<br>
+          <strong># of Seats Sold:</strong> ${info ? info["num_seats"] : "N/A"} tickets
+*/
     const colorByCategory = new Map(
-      category.map(c => [c.카테고리, c["가격/원가 비율 (%)"]])
+      category.map(c => [c.category, c["price_to_original_ratio_pct"]])
     );
 
     const stadiumColor = stadiumColors[game.stadium] || "red";
@@ -46,7 +53,7 @@ export const StadiumChartScrolly: React.FC<Props> = ({ game, stadiumData, catego
       .attr("cy", d => yScale(d.y))
       .attr("r", 5.5)
       .attr("fill", d => {
-        const val = colorByCategory.get(d.구역);
+        const val = colorByCategory.get(d.section);
         return val !== undefined ? colorScale(val) : "#ccc";
       })
       .attr("stroke", "#fff")
@@ -67,12 +74,12 @@ export const StadiumChartScrolly: React.FC<Props> = ({ game, stadiumData, catego
     // Highlight selected seat (by section name)
     if (selectedSeat) {
       svg.selectAll<SVGCircleElement, Seat>("circle")
-        .filter(d => d.구역 === selectedSeat.구역)
+        .filter(d => d.section === selectedSeat.section)
         .attr("stroke-width", 3)
         .attr("stroke", "#fcffc6");
 
       const category = categoryData[game.id] || [];
-      const info = category.find(c => c.카테고리 === selectedSeat.구역);
+      const info = category.find(c => c.category === selectedSeat.section);
 
       // Use the selected seat's actual x and y coordinates
       const seatX = xScale(selectedSeat.x);
@@ -84,16 +91,16 @@ export const StadiumChartScrolly: React.FC<Props> = ({ game, stadiumData, catego
       // Create styled lines with labels and values
       const padding = 10;
       const lineHeight = 18;
-      const labelValuePairs = [
-        { label: "구역:", value: selectedSeat.구역 },
-        { label: "거래가격/원가 비율:", value: info ? `${info["가격/원가 비율 (%)"]}%` : "N/A" },
-        { label: "원가:", value: info ? `${Number(info["평균_원가"]).toLocaleString()}원` : "N/A" },
-        { label: "평균 거래가격:", value: info ? `${Number(info["평균_가격"]).toLocaleString()}원` : "N/A" },
-        { label: "중앙 거래가격:", value: info ? `${Number(info["중앙_가격"]).toLocaleString()}원` : "N/A" },
-        { label: "재판매 좌석 개수:", value: info ? `${info["좌석_개수"]}개` : "N/A" }
+      const labelValuePairs = [          
+        { label: "Section:", value: selectedSeat.section },
+        { label: "Resale/Original Ratio:", value: info ? `${info["price_to_original_ratio_pct"]}%` : "N/A" },
+        { label: "Original Price:", value: info ? `₩${Number(info["avg_original_price"]).toLocaleString()}` : "N/A" },
+        { label: "Average Resale Price:", value: info ? `₩${Number(info["avg_price"]).toLocaleString()}` : "N/A" },
+        { label: "Median Resale Price:", value: info ? `₩${Number(info["median_price"]).toLocaleString()}` : "N/A" },
+        { label: "# of Tickets:", value: info ? `${info["num_seats"]} tickets` : "N/A" }
       ];
 
-      const boxWidth = 160;
+      const boxWidth = 200;
       const boxHeight = labelValuePairs.length * lineHeight + padding * 2;
 
       // Add background rectangle positioned relative to the seat

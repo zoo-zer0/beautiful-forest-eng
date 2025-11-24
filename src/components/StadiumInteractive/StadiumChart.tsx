@@ -64,9 +64,18 @@ useEffect(() => {
 
   const xScale = d3.scaleLinear().domain([0, 950]).range([0, width]);
   const yScale = d3.scaleLinear().domain([0, 950]).range([0, height]);
-
+/*
+"category": "SKY Upper Designated Seat",
+      "avg_price": 76832.0,
+      "max_price": 180000.0,
+      "min_price": 38800.0,
+      "median_price": 77000.0,
+      "avg_original_price": 25000.0,
+      "num_seats": 899,
+      "price_to_original_ratio_pct": 307.3
+ */
   const colorByCategory = new Map(
-    category.map(c => [c.카테고리, c["가격/원가 비율 (%)"]])
+    category.map(c => [c.category, c["price_to_original_ratio_pct"]])
   );
 
   const stadiumColor = stadiumColors[game.stadium] || "red";
@@ -82,35 +91,35 @@ useEffect(() => {
     .attr("cy", d => yScale(d.y))
     .attr("r", 5.5)
     .attr("fill", d => {
-      const val = colorByCategory.get(d.구역);
+      const val = colorByCategory.get(d.section);
       return val !== undefined ? colorScale(val) : "#ccc";
     })
     .attr("stroke", "#fff")
     .attr("stroke-width", 1.5)
     .on("mouseover", function (event, d) {
-      if (selectedSeat?.구역=== d.구역) return; // don't hover-highlight selected seat
+      if (selectedSeat?.section=== d.section) return; // don't hover-highlight selected seat
 
-      const info = category.find(p => p.카테고리 === d.구역);
+      const info = category.find(p => p.category === d.section);
       tooltip
         .style("visibility", "visible")
         .html(`
-          <strong>구역:</strong> ${d.구역}<br>
-          <strong>거래가격/원가 비율:</strong> ${info ? info["가격/원가 비율 (%)"] : "N/A"}%<br>
-          <strong>원가:</strong> ${info ? Number(info["평균_원가"]).toLocaleString() : "N/A"}원<br>
-          <strong>평균 거래가격:</strong> ${info ? Number(info["평균_가격"]).toLocaleString() : "N/A"}원<br>
-          <strong>중앙 거래가격:</strong> ${info ? Number(info["중앙_가격"]).toLocaleString() : "N/A"}원<br>
-          <strong>재판매 좌석 개수:</strong> ${info ? info["좌석_개수"] : "N/A"}개
+          <strong>Section:</strong> ${d.section}<br>
+          <strong>Resale/Original Ratio:</strong> ${info ? info["price_to_original_ratio_pct"] : "N/A"}%<br>
+          <strong>Original Price:</strong> ₩${info ? Number(info["avg_original_price"]).toLocaleString() : "N/A"}<br>
+          <strong>Average Resale Price:</strong> ₩${info ? Number(info["avg_price"]).toLocaleString() : "N/A"}<br>
+          <strong>Median Resale Price:</strong> ₩${info ? Number(info["median_price"]).toLocaleString() : "N/A"}<br>
+          <strong># of Tickets:</strong> ${info ? info["num_seats"] : "N/A"} tickets
         `)
         .style("left", event.pageX + 10 + "px")
         .style("top", event.pageY - 20 + "px");
 
       svg
         .selectAll<SVGCircleElement, Seat>("circle")
-        .filter(p => p.구역 === d.구역)
+        .filter(p => p.section === d.section)
         .attr("stroke-width", 3);
     })
     .on("mousemove", function (event, d) {
-      if (selectedSeat?.구역 !==d.구역) {
+      if (selectedSeat?.section !==d.section) {
         tooltip
           .style("left", event.pageX + 10 + "px")
           .style("top", event.pageY - 20 + "px");
@@ -119,12 +128,12 @@ useEffect(() => {
     .on("mouseout", function (_event , d) {
       
 
-        if (selectedSeat?.구역 === d.구역) return;
+        if (selectedSeat?.section === d.section) return;
       
         // Revert hovered circle stroke
         svg
           .selectAll<SVGCircleElement, Seat>("circle")
-          .filter(p => p.구역 === d.구역)
+          .filter(p => p.section === d.section)
           .attr("stroke-width", 1.5);
 
         tooltip.style("visibility", "hidden");      
@@ -133,7 +142,7 @@ useEffect(() => {
       onSelect(d);
 
       // Clear previous selection
-      if (selectedSeat?.구역  === d.구역) {
+      if (selectedSeat?.section  === d.section) {
         // Clicking again deselects
         selectedSeat = null;
         tooltip.style("visibility", "hidden");
@@ -142,18 +151,18 @@ useEffect(() => {
       }
 
       selectedSeat = d;
-      const info = category.find(p => p.카테고리 === d.구역);
+      const info = category.find(p => p.category === d.section);
       tooltip.style("visibility", "hidden");
       // Keep tooltip visible at that spot
       tooltipSelected
         .style("visibility", "visible")
         .html(`
-          <strong>구역:</strong> ${d.구역}<br>
-          <strong>거래가격/원가 비율:</strong> ${info ? info["가격/원가 비율 (%)"] : "N/A"}%<br>
-          <strong>원가:</strong> ${info ? Number(info["평균_원가"]).toLocaleString() : "N/A"}원<br>
-          <strong>평균 거래가격:</strong> ${info ? Number(info["평균_가격"]).toLocaleString() : "N/A"}원<br>
-          <strong>중앙 거래가격:</strong> ${info ? Number(info["중앙_가격"]).toLocaleString() : "N/A"}원<br>
-          <strong>재판매 좌석 개수:</strong> ${info ? info["좌석_개수"] : "N/A"}개
+          <strong>Section:</strong> ${d.section}<br>
+          <strong>Resale/Original Ratio:</strong> ${info ? info["price_to_original_ratio_pct"] : "N/A"}%<br>
+          <strong>Original Price:</strong> ₩${info ? Number(info["avg_original_price"]).toLocaleString() : "N/A"}<br>
+          <strong>Average Resale Price:</strong> ₩${info ? Number(info["avg_price"]).toLocaleString() : "N/A"}<br>
+          <strong>Median Resale Price:</strong> ₩${info ? Number(info["median_price"]).toLocaleString() : "N/A"}<br>
+          <strong># of Tickets:</strong> ${info ? info["num_seats"] : "N/A"} tickets
         `)
         .style("left", event.pageX + 10 + "px")
         .style("top", event.pageY - 20 + "px");
@@ -161,7 +170,7 @@ useEffect(() => {
       svg.selectAll<SVGCircleElement, Seat>("circle").attr("stroke-width", 1.5);
       svg
         .selectAll<SVGCircleElement, Seat>("circle")
-        .filter(p => p.구역 === d.구역)
+        .filter(p => p.section === d.section)
         .attr("stroke-width", 3);
 
     });
@@ -196,7 +205,7 @@ useEffect(() => {
     // Highlight selected seat (by section name)
     if (selectedSeat) {
       svg.selectAll<SVGCircleElement, Seat>("circle")
-        .filter(d => d.구역 === selectedSeat.구역)
+        .filter(d => d.section === selectedSeat.section)
         .attr("stroke-width", 3)
         .attr("stroke", "#fcffc6ff");
     }

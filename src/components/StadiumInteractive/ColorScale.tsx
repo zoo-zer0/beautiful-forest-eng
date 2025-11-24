@@ -77,7 +77,7 @@ export const ColorScale: React.FC<Props> = ({ game }) => {
       .attr("transform", `translate(${margin.left - 30},${height / 2}) rotate(-90)`)
       .attr("text-anchor", "middle")
       .attr("font-size", 12)
-      .text("거래가격/원가 비율");
+      .text("Resale Price/Original Price Ratio");
 
   }, [game]);
 

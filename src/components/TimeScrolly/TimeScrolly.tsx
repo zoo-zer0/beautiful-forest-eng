@@ -23,12 +23,6 @@ function TimeScrollytelling() {
     <div className="scrolly">
         <div className="sticky_right">
             <div>
-            <h2 style={{
-                position: "absolute",
-                top: 10,        // distance from top of container
-                left: 300,       // distance from left
-                margin: 0,
-            }}>티켓 거래 속에 드러난 수상한 흔적</h2>
             <TimeGraph OnStep={step} />
             </div>
         </div>
@@ -36,28 +30,28 @@ function TimeScrollytelling() {
         <section ref={ref1} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView1 ? "active-step" : ""}>
-준플레이오프 2차전 공식 예매가 시작된 오후 3시 이후,  한 시간 사이에 등록된 재판매 티켓 물량을 살펴봤습니다.
+On October 8 at 3 p.m., official ticket sales opened for the second Semi-Playoff game.
              </p>
             </div>
         </section>
         <section ref={ref2} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView2 ? "active-step" : ""}>
-단 1시간 만에 1,146개의 매물이 올라왔습니다. 
+Within just one hour, 1,146 listings were uploaded on <em>Ticketbay</em>.
             </p>
             </div>
         </section>
         <section ref={ref3} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView3 ? "active-step" : ""}>
-특히 약 2억 원 상당의 티켓을 등록한 것으로 추정되는 D씨는, 1시간 동안 14개의 티켓을 게시했습니다.
+Notably, Seller D—who is estimated to have generated around ₩200 million in profit—posted 14 tickets for the second Semi-Playoff tickets during this one hour window. 
             </p>
             </div>
         </section>
         <section ref={ref4} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView4 ? "active-step" : ""}>
-예매 직후 판매에 나선 점으로 미뤄볼 때, 관람 목적이 아닌 <strong>영리 추구</strong>로 해석됩니다.
+The immediate posting of these tickets after sales opened implies they were purchased not for personal use, but for profit.
             </p>
             </div>
         </section>

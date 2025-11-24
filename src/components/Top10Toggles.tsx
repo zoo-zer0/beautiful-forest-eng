@@ -45,7 +45,7 @@ export function ToggleClean({
 export default function Top10Toggles(){
     return(
         <div style={{margin:"20px"}}>
-            <ToggleClean summary={"1) D씨 | 수량: 280개 | 총액: 198,279,000원 | 경기: 준플레이오프, 플레이오프, 한국시리즈 | 토글을 열면 상세정보란 확인 가능!"} content={
+            <ToggleClean summary={"1) Seller D | Quantity: 280 | Total: ₩198,279,000 | Matches: Semi-Playoffs, Playoffs, Korean Series"} content={
                 <div>
 ⚾️구매 후 거래Q&A📣 확인 <br></br>
 ⚾️모든 문의는 거래Q&A💬로 문의 주세요(전화,문자❌)<br></br>
@@ -53,7 +53,7 @@ export default function Top10Toggles(){
 ⚾️거래 파기 없는 판매자입니다🤓
                 </div>
             }/>
-            <ToggleClean summary={"2) 수량: 276개 | 총액: 99,875,300원 | 경기: 와일드카드, 준플레이오프, 플레이오프, 한국시리즈 | 토글을 열면 상세정보란 확인 가능!"} content={
+            <ToggleClean summary={"2) Quantity: 276 | Total: ₩99,875,300 | Games: Wildcard Round, Semi-Playoffs, Playoffs, Korean Series"} content={
                 <div>
 구매 후 스마트티켓을 받아보실 <br></br>
 ✔연락처를 <br></br>
@@ -73,14 +73,14 @@ export default function Top10Toggles(){
 우천 및 미세먼지 등으로 인해 주최 측에서 취소 시 전액 환불됩니다.
                 </div>
             }/>
-            <ToggleClean summary={"3) 수량: 128개 | 총액: 72,197,200원 | 경기: 와일드카드, 준플레이오프, 플레이오프, 한국시리즈 | 토글을 열면 상세정보란 확인 가능!"} content={
+            <ToggleClean summary={"3) Quantity: 128 | Total: ₩72,197,200 | Matches: Wildcard Round, Semi-Playoffs, Playoffs, Korean Series"} content={
                 <div>
 ⚾️ 모바일 티켓 전달 예정<br></br>
 ⚾️ 구매 후 성함과 연락처 필히 기재<br></br>
 ⚾️ 확인 후 즉시 발송 예정                    
                 </div>
             }/>
-            <ToggleClean summary={"4) 수량: 198개 | 총액: 71,918,000원 | 경기: 와일드카드, 준플레이오프, 플레이오프, 한국시리즈 | 토글을 열면 상세정보란 확인 가능!"} content={
+            <ToggleClean summary={"4) Quantity: 198 | Total: ₩71,918,000 | Matches: Wildcard Round, Semi-Playoffs, Playoffs, Korean Series"} content={
                 <div>
 ***************필독*************<br></br>
 <br></br>
@@ -88,7 +88,7 @@ Q&A에 성함 연락처 기재 바랍니다.<br></br>
 성함 연락처 기재해주시면 경기 당일 Q&A로 티켓 전달 해드립니다.       
                 </div>
             }/>
-            <ToggleClean summary={"5) 수량: 61개 | 총액: 32,414,000원 |  경기: 와일드카드, 준플레이오프, 플레이오프, 한국시리즈 | 토글을 열면 상세정보란 확인 가능!"} content={
+            <ToggleClean summary={"5) Quantity: 61 | Total: ₩32,414,000 | Matches: Wildcard Round, Semi-Playoffs, Playoffs, Korean Series"} content={
                 <div>
 경기 취소로 인한 환불 시(우천, KBO 취소 등) 전액 환불됩니다! 💸<br></br>
 <br></br>
@@ -106,7 +106,7 @@ Q&A에 성함 연락처 기재 바랍니다.<br></br>
 궁금한 점이 있다면 언제든지 메시지 보내주세요! 💬
                 </div>
             }/>
-            <ToggleClean summary={"6) 수량: 42개 | 총액: 22,149,000원 | 경기: 준플레이오프, 플레이오프, 한국시리즈 | 토글을 열면 상세정보란 확인 가능!"} content={
+            <ToggleClean summary={"6) Quantity: 42 | Total: ₩22,149,000 | Matches: Semi-Playoffs, Playoffs, Korean Series"} content={
                 <div>
 ■ 티켓 전달 : 티켓선물하기<br></br>
 <br></br>
@@ -119,7 +119,7 @@ Q&A에 성함 연락처 기재 바랍니다.<br></br>
 ■ 공연 취소시 전액 환불됩니다.
                 </div>
             }/>
-            <ToggleClean summary={"7) 수량: 58개 | 총액: 17,826,000원 | 경기: 와일드카드, 준플레이오프, 플레이오프, 한국시리즈 | 토글을 열면 상세정보란 확인 가능!"} content={
+            <ToggleClean summary={"7) Quantity: 58 | Total: ₩17,826,000 | Matches: Wildcard Round, Semi-Playoffs, Playoffs, Korean Series"} content={
                 <div>
 ⭐️QnA에 성함과 전화번호 꼭 남겨주세요<br></br>
 <br></br>
@@ -134,7 +134,7 @@ Q&A에 성함 연락처 기재 바랍니다.<br></br>
 ❗️상세 정보 읽지 않고 문의 시 답변하지 않으니 읽고 문의 부탁 드립니다.                    
                 </div>
             }/>
-            <ToggleClean summary={"8) 수량: 40개 | 총액: 14,435,000원 | 경기: 와일드카드, 준플레이오프, 플레이오프 | 토글을 열면 상세정보란 확인 가능!"} content={
+            <ToggleClean summary={"8) Quantity: 40 | Total: ₩14,435,000 | Matches: Wildcard Round, Semi-Playoffs, Playoffs"} content={
                 <div>
 ====================================================== <br></br>
 <br></br>
@@ -150,7 +150,7 @@ Q&A에 성함 연락처 기재 바랍니다.<br></br>
 =====================================================
                 </div>
             }/>
-            <ToggleClean summary={"9) 수량: 38개 | 총액: 14,085,200원 | 경기: 플레이오프, 한국시리즈 | 토글을 열면 상세정보란 확인 가능!"} content={
+            <ToggleClean summary={"9) Quantity: 38 | Total: ₩14,085,200 | Match: Playoffs, Korean Series"} content={
                 <div>
 ▩ 경기일시 : 2025년 10월 30일(목요일) 18시30분<br></br>
 ▩ 경기팀 : 한화이글스 vs 엘지트윈스<br></br>
@@ -168,7 +168,7 @@ Q&A에 성함 연락처 기재 바랍니다.<br></br>
 ➍ 구매해주셔서 감사합니다.. 한화 엘지가 요즘 너무 잘합니다! 우승을 위해 계속이어가며, 연승 이어갑시다^^ 낭만야구...                    
                 </div>
             }/>
-            <ToggleClean summary={"10) 수량: 42개  총액:| 11,860,000원 | 경기: 와일드카드, 준플레이오프, 플레이오프, 한국시리즈 | 토글을 열면 상세정보란 확인 가능!"} content={
+            <ToggleClean summary={"10) Quantity: 42 Total: | ₩11,860,000 | Matches: Wildcard Round, Semi-Playoffs, Playoffs, Korean Series"} content={
                 <div>
 <br></br>포스트시즌 와일드카드
 <br></br>

@@ -35,28 +35,28 @@ function SusScrolly() {
         <section ref={ref1} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView1 ? "active-step" : ""}>
-업로드 시점을 좀 더 들여다보았을 때, 10월 9일 오후 8시 42분 45초부터 44분 5초 사이 특이한 점을 발견했습니다. 
+Additionally, on October 9, between 8:42:45 p.m. and 8:44:05 p.m.—a span of 80 seconds—anomalous behavior was detected.
             </p>
             </div>
         </section>
         <section ref={ref2} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView2 ? "active-step" : ""}>
-취재진이 직접 업로드를 시도한 결과, 티켓 1장을 등록하는 데 약 40초가 소요됐습니다. 같은 시간에 최대 2개의 매물만 게시할 수 있었습니다.
+When our team attempted to upload tickets ourselves, it took approximately 40 seconds to post a single ticket: a maximum of two tickets could be uploaded within this time frame. 
             </p>
             </div>
         </section>
         <section ref={ref3} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView3 ? "active-step" : ""}>
-그러나 D씨는<strong>불과 80초 만에 7개</strong>의 매물을 올렸습니다.
+However, Seller D managed to post seven tickets within just 80 seconds.
             </p>
             </div>
         </section>
         <section ref={ref4} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView4 ? "active-step" : ""}>
-<strong>매크로(자동 입력 프로그램)</strong>를 이용했을 가능성이 높은 대목입니다.
+This strongly suggests the use of automated software.
             </p>
             </div>
         </section>

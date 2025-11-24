@@ -7,15 +7,15 @@ function ScrollytellingStadium() {
   const [activeSeat, setActiveSeat] = useState<Seat | null>(null);
   const [activeGameID, setActiveGameID] = useState<string | null>("8");
   const seat1: Seat | null = null;
-  const seat2: Seat = {x:-100,y:-1000,구역:""}; //show graph //= { x: 149, y: 388, 구역: "SKY 상단지정석" };
+  const seat2: Seat = {x:-100,y:-1000,section:""}; //show graph //= { x: 149, y: 388, section: "SKY Upper Designated Seat" };
   const seat3: Seat | null = null;
-  const seat4: Seat = {x:-100,y:-1000,구역:""}; //show graph
-  const seat5: Seat = { x: 177,y: 318,구역: "그린지정석"}; //green seats
+  const seat4: Seat = {x:-100,y:-1000,section:""}; //show graph
+  const seat5: Seat = { x: 177,y: 318,section: "Green Designated Seat"}; //green seats
   const seat6: Seat | null = null; //hide graph
-  const seat7: Seat={ x: 177,y: 328,구역: "네이비석"} //navy seats
-  const seat8: Seat={ x: 177,y: 338,구역: "블루석"} //blue seats
-  const seat9: Seat={ x: 177,y: 348,구역: "레드석"} //red seats
-  const seat10: Seat={ x: 177,y: 358,구역: "레드석"} //red seats
+  const seat7: Seat={ x: 336,y: 663,section: "Navy Seat"} //navy seats
+  const seat8: Seat={ x: 400,y: 519,section: "Blue Seat"} //blue seats
+  const seat9: Seat={ x: 324,y: 473,section: "Red Seat"} //red seats
+  //const seat10: Seat={ x: 324,y: 473,section: "Red Seat"} //red seats
 
 
   const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.5 });
@@ -31,12 +31,12 @@ function ScrollytellingStadium() {
 
   // ✅ move state update into useEffect
   useEffect(() => {
-    if (inView1 || inView2){ //정규시즌 LG
+    if (inView1 || inView2){ //Regular Season LG
         setActiveGameID("8");
         if (inView1) setActiveSeat(seat1);
         else if (inView2) setActiveSeat(seat2);
     }
-    else if (inView3 || inView4 || inView5 || inView6 || inView7 || inView8 || inView9 || inView10){ // 포스트시즌 LG
+    else if (inView3 || inView4 || inView5 || inView6 || inView7 || inView8 || inView9 || inView10){ // Post-season LG
          setActiveGameID("6"); 
         if(inView3) setActiveSeat(seat3);
         else if (inView4) setActiveSeat(seat4);
@@ -44,14 +44,13 @@ function ScrollytellingStadium() {
         else if (inView6) setActiveSeat(seat6);
         else if (inView7) setActiveSeat(seat7);
         else if (inView8) setActiveSeat(seat8);
-        else if (inView9) setActiveSeat(seat9);
-        else if (inView10) setActiveSeat(seat10);
+        else if (inView9 || inView10) setActiveSeat(seat9);
 
     }
     else{
 
     }
-  }, [inView1, inView2, inView3, inView4, inView5, inView6]);
+  }, [inView1, inView2, inView3, inView4, inView5, inView6, inView7, inView8, inView9,inView10]);
 
     return (
     <div className="scrolly">
@@ -149,7 +148,9 @@ and the Red Seats (originally ₩50,000, price increase 517.4%).
                 <section ref={ref10} style={{ height: "100vh"}}>
             <div className="scroll-box">
             <p className={inView10 ? "active-step" : ""}>
-These so-called “regular seats” sell for an average of over ₩200,000—exceeding the ₩160,000 original price of the Premium Seats. As affordable sections virtually disappear, rising ticket prices have turned watching a game from a public pastime into a privilege. 
+These so-called “regular seats” sell for an average of over ₩200,000—exceeding the ₩160,000 original price of the Premium Seats. 
+<br></br><br></br>
+As affordable sections virtually disappear, rising ticket prices have turned watching a game from a public pastime into a privilege. 
             </p>
             </div>
         </section>

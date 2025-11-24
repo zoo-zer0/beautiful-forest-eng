@@ -21,21 +21,21 @@ export type TicketData = Record<
 >;
 
 
-export type GameType = '와일드카드' | '준플레이오프' | '플레이오프' | '한국시리즈' | '정규시즌';
+export type GameType = 'Wild Card' | 'Semi-Playoffs' | 'Playoffs' | 'Korean Series' | "Regular Season";
 
 export interface Seat {
   x: number;
   y: number;
-  구역: string;
+  section: string;
 }
 
 export interface CategoryInfo {
-  카테고리: string;
-  "가격/원가 비율 (%)": number;
-    "평균_가격": number;
-    "최고_가격": number;
-    "최저_가격": number;
-    "중앙_가격": number;
-    "평균_원가": number;
-    "좌석_개수": number;
+  category: string;
+  "price_to_original_ratio_pct": number;
+    "avg_price": number;
+    "max_price": number;
+    "min_price": number;
+    "median_price": number;
+    "avg_original_price": number;
+    "num_seats": number;
 }

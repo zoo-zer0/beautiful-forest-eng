@@ -60,7 +60,7 @@ export const DisplayArea: React.FC<Props> = ({ game, selectedSeat, onSelect, scr
         <ColorScale game={game} />
         </div>
       </div>
-      <div style={{height: '500px', width: '500px'}}>
+      <div style={{height: '600px', width: '500px'}}>
         <StadiumGraph game={game}
         selectedSeat={selectedSeat}
         categoryData={categoryData}

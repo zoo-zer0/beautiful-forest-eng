@@ -5,7 +5,7 @@ import { GameSelector } from './GameSelector.tsx';
 import { DisplayArea } from './DisplayArea.tsx';
 
 function InteractiveStadium() {
-  const [selectedGameType, setSelectedGameType] = useState<GameType | null>('와일드카드');
+  const [selectedGameType, setSelectedGameType] = useState<GameType | null>('Wild Card');
   const [selectedGame, setSelectedGame] = useState<Game | null>(null);
   const [selectedSeat, setSelectedSeat] = useState<Seat | null>(null);
 
@@ -18,21 +18,21 @@ function InteractiveStadium() {
     setSelectedSeat(null);
   }
   const allGames: Game[] = [
-    { id: '1', name: '1, 2차 대구 삼성 라이온즈 파크', gameType: '와일드카드',stadium: 'samsung', title: '와일드카드 1, 2차' },
+    { id: '1', name: 'Games 1, 2 Daegu Samsung Lions Park', gameType: 'Wild Card',stadium: 'samsung', title: 'Wild Card Games 1, 2' },
     
-    { id: '2', name: '1, 2차 인천 SSG 랜더스 필드', gameType: '준플레이오프', stadium: 'ssg', title: '준플레이오프 1, 2차' },
-    { id: '3', name: '3, 4차 대구 삼성 라이온즈 파크', gameType: '준플레이오프', stadium: 'samsung', title: '준플레이오프 3, 4차' },
+    { id: '2', name: 'Games 1, 2 Incheon SSG Landers Field', gameType: 'Semi-Playoffs', stadium: 'ssg', title: 'Semi-Playoffs Games 1, 2' },
+    { id: '3', name: 'Games 3, 4 Daegu Samsung Lions Park', gameType: 'Semi-Playoffs', stadium: 'samsung', title: 'Semi-Playoffs Games 3, 4' },
 
-    { id: '4', name: '1, 2, 5차 대전 한화생명 볼파크', gameType: '플레이오프', stadium: 'hanhwa', title: '플레이오프 1, 2, 5차' },
-    { id: '5', name: '3, 4차 대구 삼성 라이온즈 파크', gameType: '플레이오프', stadium: 'samsung', title: '플레이오프 3, 4차' },
+    { id: '4', name: 'Games 1, 2, 5 Daejeon Hanwha Life Ballpark', gameType: 'Playoffs', stadium: 'hanhwa', title: 'Playoffs Games 1, 2, 5' },
+    { id: '5', name: 'Games 3, 4 Daegu Samsung Lions Park', gameType: 'Playoffs', stadium: 'samsung', title: 'Playoffs Games 3, 4' },
 
-    {id: '6', name: '1, 2차 서울종합운동장 야구장', gameType:'한국시리즈', stadium:'lg', title: '한국시리즈 1, 2차'},
-    {id: '7', name: '3, 4, 5차 대전 한화생명 볼파크', gameType:'한국시리즈', stadium:'hanhwa', title: '한국시리즈 3, 4, 5차'},
+    {id: '6', name: 'Games 1, 2 Seoul Sports Complex Baseball Stadium', gameType:'Korean Series', stadium:'lg', title: 'Korean Series Games 1, 2'},
+    {id: '7', name: 'Games 3, 4, 5 Daejeon Hanwha Life Ballpark', gameType:'Korean Series', stadium:'hanhwa', title: 'Korean Series Games 3, 4, 5'},
 
-    {id: '8', name: '정규시즌 서울종합운동장 야구장', gameType:'정규시즌', stadium: 'lg', title: '8월 8~10일 한화 vs LG'},
-    {id: '9', name: '정규시즌 인천 SSG 랜더스 필드', gameType:'정규시즌', stadium: 'ssg', title: '8월 12~14일 키움 vs SSG'},
-    {id: '10', name: '정규시즌 대전 한화생명 볼파크', gameType:'정규시즌', stadium: 'hanhwa', title: '8월 12~14일 롯데 vs 한화'},
-    {id: '11', name: '정규시즌 대구 삼성 라이온즈 파크', gameType:'정규시즌', stadium: 'samsung', title: '8월 12~14일 기아 vs 삼성'}
+    {id: '8', name: 'Regular Season Seoul Sports Complex Baseball Stadium', gameType:'Regular Season', stadium: 'lg', title: 'Aug 8-10 Hanwha vs LG'},
+    {id: '9', name: 'Regular Season Incheon SSG Landers Field', gameType:'Regular Season', stadium: 'ssg', title: 'Aug 12-14 Kiwoom vs SSG'},
+    {id: '10', name: 'Regular Season Daejeon Hanwha Life Ballpark', gameType:'Regular Season', stadium: 'hanhwa', title: 'Aug 12-14 Lotte vs Hanwha'},
+    {id: '11', name: 'Regular Season Daegu Samsung Lions Park', gameType:'Regular Season', stadium: 'samsung', title: 'Aug 12-14 Kia vs Samsung'}
 
   ];
 
@@ -52,8 +52,7 @@ function InteractiveStadium() {
       <GameTypeSelector selectedGameType={selectedGameType} onSelect={handleGameTypeSelect} />
       <div>
       <DisplayArea game={selectedGame} selectedSeat={selectedSeat} onSelect={setSelectedSeat} scrolly={false} />
-
-      <GameSelector games={filteredGames} selectedGame={selectedGame} onSelect={handleGameSelect} />
+        <GameSelector games={filteredGames} selectedGame={selectedGame} onSelect={handleGameSelect} />
       </div>
     </div>
   );

@@ -105,7 +105,7 @@ export const SusGraph: React.FC<Props> = ({ OnStep }) => {
             .style("font-size", "20px")
             .style("font-family", "sans-serif")
             .style("fill", "#333")
-            .text("80초")
+            .text("80 seconds")
             .style("opacity", 0)
             .transition().duration(800)
             .style("opacity", 1);

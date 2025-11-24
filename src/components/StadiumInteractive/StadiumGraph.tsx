@@ -26,14 +26,14 @@ interface Props {
 
 export const StadiumGraph: React.FC<Props> = ({ game, selectedSeat, scrolly}) =>{
     const width = 500;
-    const height = 500;
+    const height = 600;
     const ref = useRef<SVGSVGElement | null>(null);
     useEffect(()=>{
         if(!game || !ref.current) return;
         const svg = d3.select(ref.current);
 //        svg.selectAll("*").remove();
 
-        const margin = {top: 20, right: 20, bottom: 60, left: 60};
+        const margin = {top: 30, right: 20, bottom: 100, left: 100};
         const primaryColor = colorPalette.primary;
         const secondaryColor = colorPalette.secondary;
 
@@ -58,18 +58,18 @@ export const StadiumGraph: React.FC<Props> = ({ game, selectedSeat, scrolly}) =>
             d3.select("body").selectAll("div.tooltip-hist").remove();
 
             const labelMap: Record<string, string> = {
-            "평균_원가": "원가",
-            "평균_가격": "평균 거래가"
+            "avg_original_price": "Original Price",
+            "avg_price": "Average Resale"
             };
 
             //make game-level grouped bar chart
             const data = categoryData[game.id] || [];
             const x0 = d3.scaleBand()
-                .domain(data.map(d=>d.카테고리))
+                .domain(data.map(d=>d.category))
                 .range([margin.left, width-margin.right])
                 .paddingInner(0.1);
             const x1 = d3.scaleBand()
-                .domain(['평균_원가', "평균_가격"])
+                .domain(['avg_original_price', "avg_price"])
                 .range([0, x0.bandwidth()])
                 .padding(0.01);
             const y = d3.scaleLinear()
@@ -78,18 +78,18 @@ export const StadiumGraph: React.FC<Props> = ({ game, selectedSeat, scrolly}) =>
             
             
             const color = d3.scaleOrdinal<string>()
-                .domain(["평균_원가", "평균_가격"])
+                .domain(["avg_original_price", "avg_price"])
                 .range([primaryColor, secondaryColor]);
             
             svg.append("g")
                 .selectAll("g")
                 .data(data)
                 .enter().append("g")
-                    .attr("transform", d=> `translate(${x0(d.카테고리)}, 0)`)
+                    .attr("transform", d=> `translate(${x0(d.category)}, 0)`)
                 .selectAll("rect")
                 .data(d=>[
-                    {key: "평균_원가", value: d.평균_원가, category:d.카테고리},
-                    {key: "평균_가격", value: d.평균_가격, category:d.카테고리}
+                    {key: "avg_original_price", value: d.avg_original_price, category:d.category},
+                    {key: "avg_price", value: d.avg_price, category:d.category}
                 ])
                 .enter().append("rect")
                   .attr("x", d => x1(d.key)!)
@@ -126,7 +126,7 @@ export const StadiumGraph: React.FC<Props> = ({ game, selectedSeat, scrolly}) =>
             const legend = svg.append("g")
                 .attr("transform", `translate(${width - margin.right - 100},${margin.top+10})`);
 
-            ["평균_원가", "평균_가격"].forEach((key, i) => {
+            ["avg_original_price", "avg_price"].forEach((key, i) => {
                 legend.append("rect")
                 .attr("x", 0).attr("y", i * 20)
                 .attr("width", 12).attr("height", 12)
@@ -139,14 +139,14 @@ export const StadiumGraph: React.FC<Props> = ({ game, selectedSeat, scrolly}) =>
                 .text(labelMap[key]);
             svg.append("text")
                 .attr("x", width / 2+10)
-                .attr("y", margin.top)
+                .attr("y", margin.top-10)
                 .attr("text-anchor", "middle")
                 .style("font-size", "16px")
-                .text(`${game.title}: 구역별 원가 vs 평균 거래 가격`);  
+                .text(`${game.title}: Original vs Resale Price`);  
         });
         } else {
             const chartData: TicketData = ticketData;
-            const seatCategory = selectedSeat.구역;
+            const seatCategory = selectedSeat.section;
             const tooltipHist = tooltip.attr("class", "tooltip-hist")
             const bins = chartData[game.id]?.[seatCategory] as Bin[];
             if(!bins || bins.length === 0) return;
@@ -275,10 +275,10 @@ yAxisGroup.selectAll<SVGGElement, unknown>(".tick")
             // Title
             svg.append("text")
                 .attr("x", width / 2)
-                .attr("y", margin.top)
+                .attr("y", margin.top-10)
                 .attr("text-anchor", "middle")
-                .style("font-size", "16px")
-                .text(`${game.title}: ${selectedSeat.구역} 재판매 가격 분포`);            
+                .style("font-size", "14px")
+                .text(`${game.title}: ${selectedSeat.section} Resale Price Distribution`);            
         }
     }, [game, selectedSeat, categoryData]);
     return <svg ref={ref} width={width} height={height} style={{ backgroundColor: "#ffffffff" }}></svg>;

@@ -8,7 +8,7 @@ export interface PriceBin {
   };
 }
 
-// Each seat category (e.g. "블루존", "VIP석") maps to an array of PriceBins
+// Each seat category (e.g. "Blue Zone", "VIP Seat") maps to an array of PriceBins
 export type SeatCategoryData = Record<string, PriceBin[]>;
 
 // Each file ID (or date, depending on how you structure it) maps to seat categories
@@ -16,7 +16,7 @@ export type TicketData = Record<string, SeatCategoryData> | null;
 
 export const ticketData = {
   "1": {
-    "SKY 상단지정석": [
+    "SKY Upper Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -794,7 +794,7 @@ export const ticketData = {
         }
       }
     ],
-    "SKY요기보패밀리존": [
+    "SKY Yogibo Family Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -1572,7 +1572,7 @@ export const ticketData = {
         }
       }
     ],
-    "SKY하단지정석": [
+    "SKY Lower Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -2350,7 +2350,7 @@ export const ticketData = {
         }
       }
     ],
-    "VIP석": [
+    "VIP Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -3128,7 +3128,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야지정석": [
+    "Infield Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -3906,7 +3906,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야테이블석": [
+    "Infield Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -4684,7 +4684,7 @@ export const ticketData = {
         }
       }
     ],
-    "루프탑 테이블석": [
+    "Rooftop Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -5462,7 +5462,7 @@ export const ticketData = {
         }
       }
     ],
-    "블루존": [
+    "Blue Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -6240,7 +6240,7 @@ export const ticketData = {
         }
       }
     ],
-    "스윗박스": [
+    "Sweet Box": [
       {
         "name": 20000,
         "value": 0,
@@ -7018,7 +7018,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야지정석": [
+    "Outfield Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -7796,7 +7796,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야커플테이블석": [
+    "Outfield Couple Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -8574,7 +8574,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야테이블석": [
+    "Outfield Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -9352,7 +9352,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야패밀리석": [
+    "Outfield Family Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -10130,7 +10130,7 @@ export const ticketData = {
         }
       }
     ],
-    "원정응원석": [
+    "Away Team Cheer Section": [
       {
         "name": 20000,
         "value": 0,
@@ -10908,7 +10908,7 @@ export const ticketData = {
         }
       }
     ],
-    "익사이팅석": [
+    "Exciting Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -11686,7 +11686,7 @@ export const ticketData = {
         }
       }
     ],
-    "잔디그린존": [
+    "Grass Green Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -12464,7 +12464,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙 SKY 상단지정석": [
+    "Central SKY Upper Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -13242,7 +13242,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙 SKY하단지정석": [
+    "Central SKY Lower Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -14020,7 +14020,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙테이블석": [
+    "Central Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -14798,7 +14798,7 @@ export const ticketData = {
         }
       }
     ],
-    "캠핑존": [
+    "Camping Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -15576,7 +15576,7 @@ export const ticketData = {
         }
       }
     ],
-    "파티플로어라이브": [
+    "Party Floor Live": [
       {
         "name": 20000,
         "value": 0,
@@ -17912,7 +17912,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야지정석A": [
+    "Infield Designated SeatA": [
       {
         "name": 20000,
         "value": 499,
@@ -18690,7 +18690,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야지정석B": [
+    "Infield Designated SeatB": [
       {
         "name": 20000,
         "value": 673,
@@ -20246,7 +20246,7 @@ export const ticketData = {
         }
       }
     ],
-    "스카이박스": [
+    "Sky Box": [
       {
         "name": 20000,
         "value": 0,
@@ -22580,7 +22580,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야 지정석": [
+    "Outfield Designated Seat ": [
       {
         "name": 20000,
         "value": 200,
@@ -23358,7 +23358,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야 탁자석": [
+    "Outfield Designated Seat": [
       {
         "name": 20000,
         "value": 1,
@@ -24136,7 +24136,7 @@ export const ticketData = {
         }
       }
     ],
-    "응원단석": [
+    "Cheering Section": [
       {
         "name": 20000,
         "value": 10,
@@ -25692,7 +25692,7 @@ export const ticketData = {
         }
       }
     ],
-    "이닝스 VIP 테라스": [
+    "Innings VIP Terrace": [
       {
         "name": 20000,
         "value": 0,
@@ -26470,7 +26470,7 @@ export const ticketData = {
         }
       }
     ],
-    "잔디석": [
+    "Grass Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -27248,7 +27248,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙지정석": [
+    "Central Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -28026,7 +28026,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙탁자석": [
+    "Central Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -28804,7 +28804,7 @@ export const ticketData = {
         }
       }
     ],
-    "포수후면석": [
+    "Catcher Back Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -29584,7 +29584,7 @@ export const ticketData = {
     ]
   },
   "11": {
-    "SKY 상단지정석": [
+    "SKY Upper Designated Seat": [
       {
         "name": 20000,
         "value": 335,
@@ -30362,7 +30362,7 @@ export const ticketData = {
         }
       }
     ],
-    "SKY하단지정석": [
+    "SKY Lower Designated Seat": [
       {
         "name": 20000,
         "value": 45,
@@ -31140,7 +31140,7 @@ export const ticketData = {
         }
       }
     ],
-    "VIP석": [
+    "VIP Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -31918,7 +31918,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야지정석": [
+    "Infield Designated Seat": [
       {
         "name": 20000,
         "value": 81,
@@ -32696,7 +32696,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야테이블석": [
+    "Infield Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -33474,7 +33474,7 @@ export const ticketData = {
         }
       }
     ],
-    "루프탑 테이블석": [
+    "Rooftop Table Seat": [
       {
         "name": 20000,
         "value": 1,
@@ -34252,7 +34252,7 @@ export const ticketData = {
         }
       }
     ],
-    "블루존": [
+    "Blue Zone": [
       {
         "name": 20000,
         "value": 3,
@@ -35030,7 +35030,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야지정석": [
+    "Outfield Designated Seat": [
       {
         "name": 20000,
         "value": 105,
@@ -35808,7 +35808,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야커플테이블석": [
+    "Outfield Couple Table Seat": [
       {
         "name": 20000,
         "value": 10,
@@ -36586,7 +36586,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야테이블석": [
+    "Outfield Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -37364,7 +37364,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야패밀리석": [
+    "Outfield Family Seat": [
       {
         "name": 20000,
         "value": 4,
@@ -38142,7 +38142,7 @@ export const ticketData = {
         }
       }
     ],
-    "원정응원석": [
+    "Away Team Cheer Section": [
       {
         "name": 20000,
         "value": 137,
@@ -38920,7 +38920,7 @@ export const ticketData = {
         }
       }
     ],
-    "익사이팅석": [
+    "Exciting Seat": [
       {
         "name": 20000,
         "value": 5,
@@ -39698,7 +39698,7 @@ export const ticketData = {
         }
       }
     ],
-    "잔디그린존": [
+    "Grass Green Zone": [
       {
         "name": 20000,
         "value": 17,
@@ -40476,7 +40476,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙 SKY 상단지정석": [
+    "Central SKY Upper Designated Seat": [
       {
         "name": 20000,
         "value": 68,
@@ -41254,7 +41254,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙 SKY하단지정석": [
+    "Central SKY Lower Designated Seat": [
       {
         "name": 20000,
         "value": 5,
@@ -42032,7 +42032,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙 외야지정석": [
+    "Central Outfield Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -42810,7 +42810,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙테이블석": [
+    "Central Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -43588,7 +43588,7 @@ export const ticketData = {
         }
       }
     ],
-    "캠핑존": [
+    "Camping Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -44366,7 +44366,7 @@ export const ticketData = {
         }
       }
     ],
-    "파티플로어라이브": [
+    "Party Floor Live": [
       {
         "name": 20000,
         "value": 0,
@@ -45924,7 +45924,7 @@ export const ticketData = {
     ]
   },
   "2": {
-    "1층 테이블석": [
+    "1st Floor Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -46702,7 +46702,7 @@ export const ticketData = {
         }
       }
     ],
-    "2층 테이블석": [
+    "2nd Floor Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -47480,7 +47480,7 @@ export const ticketData = {
         }
       }
     ],
-    "4층 SKY뷰석": [
+    "4th Floor SKY View Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -48258,7 +48258,7 @@ export const ticketData = {
         }
       }
     ],
-    "SKY탁자석": [
+    "SKY Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -49036,7 +49036,7 @@ export const ticketData = {
         }
       }
     ],
-    "그린존": [
+    "Green Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -49814,7 +49814,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야패밀리석": [
+    "Infield Family Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -50592,7 +50592,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야필드석": [
+    "Infield Field Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -51370,7 +51370,7 @@ export const ticketData = {
         }
       }
     ],
-    "덕아웃 상단석": [
+    "Dugout Upper Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -52148,785 +52148,7 @@ export const ticketData = {
         }
       }
     ],
-    "덕아웃상단석": [
-      {
-        "name": 20000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "20000~30000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 30000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "30000~40000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 40000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "40000~50000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 50000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "50000~60000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 60000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "60000~70000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 70000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "70000~80000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 80000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "80000~90000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 90000,
-        "value": 5,
-        "breakdown": {
-          "가격범위": "90000~100000원",
-          "개수": "5개"
-        }
-      },
-      {
-        "name": 100000,
-        "value": 7,
-        "breakdown": {
-          "가격범위": "100000~110000원",
-          "개수": "7개"
-        }
-      },
-      {
-        "name": 110000,
-        "value": 13,
-        "breakdown": {
-          "가격범위": "110000~120000원",
-          "개수": "13개"
-        }
-      },
-      {
-        "name": 120000,
-        "value": 15,
-        "breakdown": {
-          "가격범위": "120000~130000원",
-          "개수": "15개"
-        }
-      },
-      {
-        "name": 130000,
-        "value": 12,
-        "breakdown": {
-          "가격범위": "130000~140000원",
-          "개수": "12개"
-        }
-      },
-      {
-        "name": 140000,
-        "value": 21,
-        "breakdown": {
-          "가격범위": "140000~150000원",
-          "개수": "21개"
-        }
-      },
-      {
-        "name": 150000,
-        "value": 7,
-        "breakdown": {
-          "가격범위": "150000~160000원",
-          "개수": "7개"
-        }
-      },
-      {
-        "name": 160000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "160000~170000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 170000,
-        "value": 1,
-        "breakdown": {
-          "가격범위": "170000~180000원",
-          "개수": "1개"
-        }
-      },
-      {
-        "name": 180000,
-        "value": 3,
-        "breakdown": {
-          "가격범위": "180000~190000원",
-          "개수": "3개"
-        }
-      },
-      {
-        "name": 190000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "190000~200000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 200000,
-        "value": 5,
-        "breakdown": {
-          "가격범위": "200000~210000원",
-          "개수": "5개"
-        }
-      },
-      {
-        "name": 210000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "210000~220000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 220000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "220000~230000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 230000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "230000~240000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 240000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "240000~250000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 250000,
-        "value": 1,
-        "breakdown": {
-          "가격범위": "250000~260000원",
-          "개수": "1개"
-        }
-      },
-      {
-        "name": 260000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "260000~270000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 270000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "270000~280000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 280000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "280000~290000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 290000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "290000~300000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 300000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "300000~310000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 310000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "310000~320000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 320000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "320000~330000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 330000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "330000~340000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 340000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "340000~350000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 350000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "350000~360000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 360000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "360000~370000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 370000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "370000~380000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 380000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "380000~390000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 390000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "390000~400000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 400000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "400000~410000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 410000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "410000~420000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 420000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "420000~430000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 430000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "430000~440000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 440000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "440000~450000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 450000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "450000~460000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 460000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "460000~470000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 470000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "470000~480000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 480000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "480000~490000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 490000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "490000~500000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 500000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "500000~510000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 510000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "510000~520000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 520000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "520000~530000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 530000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "530000~540000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 540000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "540000~550000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 550000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "550000~560000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 560000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "560000~570000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 570000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "570000~580000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 580000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "580000~590000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 590000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "590000~600000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 600000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "600000~610000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 610000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "610000~620000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 620000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "620000~630000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 630000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "630000~640000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 640000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "640000~650000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 650000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "650000~660000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 660000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "660000~670000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 670000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "670000~680000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 680000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "680000~690000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 690000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "690000~700000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 700000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "700000~710000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 710000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "710000~720000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 720000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "720000~730000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 730000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "730000~740000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 740000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "740000~750000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 750000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "750000~760000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 760000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "760000~770000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 770000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "770000~780000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 780000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "780000~790000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 790000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "790000~800000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 800000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "800000~810000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 810000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "810000~820000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 820000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "820000~830000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 830000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "830000~840000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 840000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "840000~850000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 850000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "850000~860000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 860000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "860000~870000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 870000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "870000~880000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 880000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "880000~890000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 890000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "890000~900000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 900000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "900000~910000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 910000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "910000~920000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 920000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "920000~930000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 930000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "930000~940000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 940000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "940000~950000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 950000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "950000~960000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 960000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "960000~970000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 970000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "970000~980000원",
-          "개수": "0개"
-        }
-      },
-      {
-        "name": 980000,
-        "value": 0,
-        "breakdown": {
-          "가격범위": "980000~990000원",
-          "개수": "0개"
-        }
-      }
-    ],
-    "라이브존": [
+    "Live Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -53704,7 +52926,7 @@ export const ticketData = {
         }
       }
     ],
-    "미니 스카이박스": [
+    "Mini Sky Box": [
       {
         "name": 20000,
         "value": 0,
@@ -54482,7 +53704,7 @@ export const ticketData = {
         }
       }
     ],
-    "바비큐존": [
+    "BBQ Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -55260,7 +54482,7 @@ export const ticketData = {
         }
       }
     ],
-    "스카이박스": [
+    "Sky Box": [
       {
         "name": 20000,
         "value": 0,
@@ -56038,7 +55260,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야파티텍": [
+    "Outfield Party Deck": [
       {
         "name": 20000,
         "value": 0,
@@ -56816,7 +56038,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야패밀리석": [
+    "Outfield Family Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -57594,7 +56816,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야필드석": [
+    "Outfield Field Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -58372,7 +57594,7 @@ export const ticketData = {
         }
       }
     ],
-    "원정응원석": [
+    "Away Team Cheer Section": [
       {
         "name": 20000,
         "value": 0,
@@ -59150,7 +58372,7 @@ export const ticketData = {
         }
       }
     ],
-    "으쓱이존": [
+    "Eusseuk Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -59928,7 +59150,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙 4층 SKY뷰석": [
+    "4th Floor Central SKY View Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -60706,7 +59928,7 @@ export const ticketData = {
         }
       }
     ],
-    "초가정자": [
+    "Chogajeongja": [
       {
         "name": 20000,
         "value": 0,
@@ -61484,7 +60706,7 @@ export const ticketData = {
         }
       }
     ],
-    "프렌들리석": [
+    "Friendly Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -62262,7 +61484,7 @@ export const ticketData = {
         }
       }
     ],
-    "홈런커플석": [
+    "Homerun Couple Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -63042,7 +62264,7 @@ export const ticketData = {
     ]
   },
   "3": {
-    "SKY 상단지정석": [
+    "SKY Upper Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -63820,7 +63042,7 @@ export const ticketData = {
         }
       }
     ],
-    "SKY요기보패밀리존": [
+    "SKY Yogibo Family Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -64598,7 +63820,7 @@ export const ticketData = {
         }
       }
     ],
-    "SKY하단지정석": [
+    "SKY Lower Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -65376,7 +64598,7 @@ export const ticketData = {
         }
       }
     ],
-    "VIP석": [
+    "VIP Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -66154,7 +65376,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야지정석": [
+    "Infield Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -66932,7 +66154,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야테이블석": [
+    "Infield Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -67710,7 +66932,7 @@ export const ticketData = {
         }
       }
     ],
-    "루프탑 테이블석": [
+    "Rooftop Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -68488,7 +67710,7 @@ export const ticketData = {
         }
       }
     ],
-    "블루존": [
+    "Blue Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -69266,7 +68488,7 @@ export const ticketData = {
         }
       }
     ],
-    "스윗박스": [
+    "Sweet Box": [
       {
         "name": 20000,
         "value": 0,
@@ -70044,7 +69266,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야지정석": [
+    "Outfield Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -70822,7 +70044,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야커플테이블석": [
+    "Outfield Couple Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -71600,7 +70822,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야테이블석": [
+    "Outfield Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -72378,7 +71600,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야패밀리석": [
+    "Outfield Family Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -73156,7 +72378,7 @@ export const ticketData = {
         }
       }
     ],
-    "원정응원석": [
+    "Away Team Cheer Section": [
       {
         "name": 20000,
         "value": 0,
@@ -73934,7 +73156,7 @@ export const ticketData = {
         }
       }
     ],
-    "익사이팅석": [
+    "Exciting Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -74712,7 +73934,7 @@ export const ticketData = {
         }
       }
     ],
-    "잔디그린존": [
+    "Grass Green Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -75490,7 +74712,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙 SKY 상단지정석": [
+    "Central SKY Upper Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -76268,7 +75490,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙 SKY하단지정석": [
+    "Central SKY Lower Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -77046,7 +76268,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙테이블석": [
+    "Central Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -77824,7 +77046,7 @@ export const ticketData = {
         }
       }
     ],
-    "캠핑존": [
+    "Camping Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -78602,7 +77824,7 @@ export const ticketData = {
         }
       }
     ],
-    "파티플로어라이브": [
+    "Party Floor Live": [
       {
         "name": 20000,
         "value": 0,
@@ -79382,7 +78604,7 @@ export const ticketData = {
     ]
   },
   "4": {
-    "내야지정석A": [
+    "Infield Designated Seat A": [
       {
         "name": 20000,
         "value": 0,
@@ -80160,7 +79382,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야지정석B": [
+    "Infield Designated Seat B": [
       {
         "name": 20000,
         "value": 0,
@@ -80938,7 +80160,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야탁자석 (4층)": [
+    "Infield Table Seat (4F)": [
       {
         "name": 20000,
         "value": 0,
@@ -81716,7 +80938,7 @@ export const ticketData = {
         }
       }
     ],
-    "스카이박스": [
+    "Sky Box": [
       {
         "name": 20000,
         "value": 0,
@@ -82494,7 +81716,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야 지정석": [
+    "Outfield Designated Seat ": [
       {
         "name": 20000,
         "value": 0,
@@ -83272,7 +82494,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야 탁자석": [
+    "Outfield Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -84050,7 +83272,7 @@ export const ticketData = {
         }
       }
     ],
-    "응원단석": [
+    "Cheering Section": [
       {
         "name": 20000,
         "value": 0,
@@ -84828,7 +84050,7 @@ export const ticketData = {
         }
       }
     ],
-    "이닝스 VIP 테라스": [
+    "Innings VIP Terrace": [
       {
         "name": 20000,
         "value": 0,
@@ -85606,7 +84828,7 @@ export const ticketData = {
         }
       }
     ],
-    "잔디석": [
+    "Grass Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -86384,7 +85606,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙지정석": [
+    "Central Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -87162,7 +86384,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙탁자석": [
+    "Central Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -87940,7 +87162,7 @@ export const ticketData = {
         }
       }
     ],
-    "포수후면석": [
+    "Catcher Back Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -88720,7 +87942,7 @@ export const ticketData = {
     ]
   },
   "5": {
-    "SKY 상단지정석": [
+    "SKY Upper Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -89498,7 +88720,7 @@ export const ticketData = {
         }
       }
     ],
-    "SKY요기보패밀리존": [
+    "SKY Yogibo Family Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -90276,7 +89498,7 @@ export const ticketData = {
         }
       }
     ],
-    "SKY하단지정석": [
+    "SKY Lower Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -91054,7 +90276,7 @@ export const ticketData = {
         }
       }
     ],
-    "VIP석": [
+    "VIP Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -91832,7 +91054,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야지정석": [
+    "Infield Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -92610,7 +91832,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야테이블석": [
+    "Infield Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -93388,7 +92610,7 @@ export const ticketData = {
         }
       }
     ],
-    "루프탑 테이블석": [
+    "Rooftop Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -94166,7 +93388,7 @@ export const ticketData = {
         }
       }
     ],
-    "블루존": [
+    "Blue Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -94944,7 +94166,7 @@ export const ticketData = {
         }
       }
     ],
-    "스윗박스": [
+    "Sweet Box": [
       {
         "name": 20000,
         "value": 0,
@@ -95722,7 +94944,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야지정석": [
+    "Outfield Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -96500,7 +95722,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야커플테이블석": [
+    "Outfield Couple Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -97278,7 +96500,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야테이블석": [
+    "Outfield Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -98056,7 +97278,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야패밀리석": [
+    "Outfield Family Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -98834,7 +98056,7 @@ export const ticketData = {
         }
       }
     ],
-    "원정응원석": [
+    "Away Team Cheer Section": [
       {
         "name": 20000,
         "value": 0,
@@ -99612,7 +98834,7 @@ export const ticketData = {
         }
       }
     ],
-    "익사이팅석": [
+    "Exciting Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -100390,7 +99612,7 @@ export const ticketData = {
         }
       }
     ],
-    "잔디그린존": [
+    "Grass Green Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -101168,7 +100390,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙 SKY 상단지정석": [
+    "Central SKY Upper Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -101946,7 +101168,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙 SKY하단지정석": [
+    "Central SKY Lower Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -102724,7 +101946,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙테이블석": [
+    "Central Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -103502,7 +102724,7 @@ export const ticketData = {
         }
       }
     ],
-    "캠핑존": [
+    "Camping Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -104280,7 +103502,7 @@ export const ticketData = {
         }
       }
     ],
-    "파티플로어라이브": [
+    "Party Floor Live": [
       {
         "name": 20000,
         "value": 0,
@@ -105060,7 +104282,7 @@ export const ticketData = {
     ]
   },
   "6": {
-    "그린지정석": [
+    "Green Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -105838,7 +105060,7 @@ export const ticketData = {
         }
       }
     ],
-    "네이비석": [
+    "Navy Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -106616,7 +105838,7 @@ export const ticketData = {
         }
       }
     ],
-    "레드석": [
+    "Red Seat": [
       {
         "name": 20000,
         "value": 1,
@@ -107394,7 +106616,7 @@ export const ticketData = {
         }
       }
     ],
-    "미니테이블석": [
+    "Mini Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -108172,7 +107394,7 @@ export const ticketData = {
         }
       }
     ],
-    "블루석": [
+    "Blue Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -108950,7 +108172,7 @@ export const ticketData = {
         }
       }
     ],
-    "오렌지석 (응원석)": [
+    "Orange Seat (Cheering)": [
       {
         "name": 20000,
         "value": 0,
@@ -109728,7 +108950,7 @@ export const ticketData = {
         }
       }
     ],
-    "익사이팅존": [
+    "Exciting Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -110506,7 +109728,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙 네이비석": [
+    "Central Navy Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -111284,7 +110506,7 @@ export const ticketData = {
         }
       }
     ],
-    "테이블석": [
+    "Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -112062,7 +111284,7 @@ export const ticketData = {
         }
       }
     ],
-    "프리미엄석": [
+    "Premium Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -112842,7 +112064,7 @@ export const ticketData = {
     ]
   },
   "7": {
-    "내야지정석A": [
+    "Infield Designated SeatA": [
       {
         "name": 20000,
         "value": 0,
@@ -113620,7 +112842,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야지정석B": [
+    "Infield Designated SeatB": [
       {
         "name": 20000,
         "value": 0,
@@ -114398,7 +113620,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야탁자석 (4층)": [
+    "Infield Table Seat (4F)": [
       {
         "name": 20000,
         "value": 0,
@@ -115176,7 +114398,7 @@ export const ticketData = {
         }
       }
     ],
-    "스카이박스": [
+    "Sky Box": [
       {
         "name": 20000,
         "value": 0,
@@ -115954,7 +115176,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야 지정석": [
+    "Outfield Designated Seat ": [
       {
         "name": 20000,
         "value": 0,
@@ -116732,7 +115954,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야 탁자석": [
+    "Outfield Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -117510,7 +116732,7 @@ export const ticketData = {
         }
       }
     ],
-    "응원단석": [
+    "Cheering Section": [
       {
         "name": 20000,
         "value": 0,
@@ -118288,7 +117510,7 @@ export const ticketData = {
         }
       }
     ],
-    "이닝스 VIP 테라스": [
+    "Innings VIP Terrace": [
       {
         "name": 20000,
         "value": 0,
@@ -119066,7 +118288,7 @@ export const ticketData = {
         }
       }
     ],
-    "잔디석": [
+    "Grass Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -119844,7 +119066,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙지정석": [
+    "Central Designated Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -120622,7 +119844,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙탁자석": [
+    "Central Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -121400,7 +120622,7 @@ export const ticketData = {
         }
       }
     ],
-    "포수후면석": [
+    "Catcher Back Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -122180,7 +121402,7 @@ export const ticketData = {
     ]
   },
   "8": {
-    "그린지정석": [
+    "Green Designated Seat": [
       {
         "name": 20000,
         "value": 520,
@@ -122958,7 +122180,7 @@ export const ticketData = {
         }
       }
     ],
-    "네이비석": [
+    "Navy Seat": [
       {
         "name": 20000,
         "value": 162,
@@ -123736,7 +122958,7 @@ export const ticketData = {
         }
       }
     ],
-    "레드석": [
+    "Red Seat": [
       {
         "name": 20000,
         "value": 29,
@@ -124514,7 +123736,7 @@ export const ticketData = {
         }
       }
     ],
-    "블루석": [
+    "Blue Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -125292,7 +124514,7 @@ export const ticketData = {
         }
       }
     ],
-    "오렌지석 (응원석)": [
+    "Orange Seat (Cheering)": [
       {
         "name": 20000,
         "value": 0,
@@ -126070,7 +125292,7 @@ export const ticketData = {
         }
       }
     ],
-    "익사이팅존": [
+    "Exciting Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -126848,7 +126070,7 @@ export const ticketData = {
         }
       }
     ],
-    "중앙 네이비석": [
+    "Central Navy Seat": [
       {
         "name": 20000,
         "value": 9,
@@ -127626,7 +126848,7 @@ export const ticketData = {
         }
       }
     ],
-    "테이블석": [
+    "Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -128404,7 +127626,7 @@ export const ticketData = {
         }
       }
     ],
-    "프리미엄석": [
+    "Premium Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -129184,7 +128406,7 @@ export const ticketData = {
     ]
   },
   "9": {
-    "1층 테이블석": [
+    "1st Floor Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -129962,7 +129184,7 @@ export const ticketData = {
         }
       }
     ],
-    "2층 테이블석": [
+    "2nd Floor Table Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -132296,7 +131518,7 @@ export const ticketData = {
         }
       }
     ],
-    "그린존": [
+    "Green Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -133074,7 +132296,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야패밀리석": [
+    "Infield Family Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -133852,7 +133074,7 @@ export const ticketData = {
         }
       }
     ],
-    "내야필드석": [
+    "Infield Field Seat": [
       {
         "name": 20000,
         "value": 0,
@@ -134630,7 +133852,7 @@ export const ticketData = {
         }
       }
     ],
-    "덕아웃 상단석": [
+    "Dugout Lower Seat": [
       {
         "name": 20000,
         "value": 3,
@@ -135408,7 +134630,7 @@ export const ticketData = {
         }
       }
     ],
-    "라이브존": [
+    "Live Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -136186,7 +135408,7 @@ export const ticketData = {
         }
       }
     ],
-    "바비큐존": [
+    "BBQ Zone": [
       {
         "name": 20000,
         "value": 0,
@@ -136964,7 +136186,7 @@ export const ticketData = {
         }
       }
     ],
-    "스카이박스": [
+    "Sky Box": [
       {
         "name": 20000,
         "value": 0,
@@ -137742,7 +136964,7 @@ export const ticketData = {
         }
       }
     ],
-    "외야패밀리석": [
+    "Outfield Family Seat": [
       {
         "name": 20000,
         "value": 3,
@@ -138520,7 +137742,7 @@ export const ticketData = {
         }
       }
     ],
-    "원정응원석": [
+    "Away Team Cheer Section": [
       {
         "name": 20000,
         "value": 0,
@@ -139298,7 +138520,7 @@ export const ticketData = {
         }
       }
     ],
-    "으쓱이존": [
+    "Eusseuk Zone": [
       {
         "name": 20000,
         "value": 38,
@@ -140076,7 +139298,7 @@ export const ticketData = {
         }
       }
     ],
-    "초가정자": [
+    "Chogajeongja": [
       {
         "name": 20000,
         "value": 2,
@@ -140854,7 +140076,7 @@ export const ticketData = {
         }
       }
     ],
-    "프렌들리석": [
+    "Friendly Seat": [
       {
         "name": 20000,
         "value": 34,
@@ -141632,7 +140854,7 @@ export const ticketData = {
         }
       }
     ],
-    "홈런커플석": [
+    "Homerun Couple Seat": [
       {
         "name": 20000,
         "value": 16,

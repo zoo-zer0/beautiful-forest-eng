@@ -1196,11 +1196,12 @@ export const TimeGraph: React.FC<Props> = ({ OnStep }) => {
             .append("text")
             .attr("x", x(new Date("2025-10-08T15:00:00Z")) + 4)
             .attr("y", yBase)
+            .attr("z-index","10")
             .attr("text-anchor", "start")
             .style("font-size", "13px")
             .style("font-family", "sans-serif")
             .style("fill", "#333")
-            .text("예매시작")
+            .text("Sales Opened")
             .style("opacity", 0)
             .transition().duration(800)
             .style("opacity", 1);
