@@ -15,7 +15,7 @@ import { ToggleClean } from './components/Top10Toggles.tsx';
 import Top10Toggles from './components/Top10Toggles.tsx';
 import Conclusion from './components/Conclusion.tsx';
 import { Ratio } from './components/DataWrapperCharts.tsx';
-
+import SellerTables from './components/StadiumInteractive/SellerTables.tsx';
 function App() {
   
 
@@ -126,7 +126,7 @@ For postseason games, the average resale price surged to <strong>3.4 times</stro
 Tracking regular season sales data by member ID revealed that a small number of sellers repeatedly registered large quantities of tickets. Some accounts registered hundreds of tickets, effectively running a commercial-scale business.
 </p>
 
-add pic
+<SellerTables />
 <p>
 Above are the top 5 sellers ranked by quantity and profits, all generating <strong>at least 9 million won in profit</strong> during the regular season alone. 
 </p>
