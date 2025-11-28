@@ -6,7 +6,8 @@ export default function Hero() {
     <div
       style={{
         position:"relative",
-        display:"inline-block"
+        display:"inline-block",
+        width:"100%"
       }}
     >
       {/* background image */}
@@ -15,7 +16,7 @@ export default function Hero() {
         alt="Hero background"
         style={{
           height: "100vh",
-          width: "99vw",
+          width: "100%",
           objectFit: "cover",
           display: "block",
         }}
