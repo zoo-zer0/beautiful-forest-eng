@@ -8,8 +8,8 @@ export default function Footer(){
     position: "relative",
     left: "50%",
     right: "50%",
-    marginLeft: "-50vw",
-    marginRight: "-50vw",
+    marginLeft: "-50%",
+    marginRight: "-50%",
     height: "25vh",
     marginTop:"-50px"
   }}
